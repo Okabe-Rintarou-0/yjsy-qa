@@ -8,7 +8,9 @@ import React from 'react';
 import { DB } from '../db';
 
 const HomeView = () => {
-    const [messages, setMessages] = useState([])
+    const [messages, setMessages] = useState([
+        { text: "欢迎使用研究生小助手～", isUser: false }
+    ])
     const [message, setMessage] = useState("")
     const [messageApi, contextHolder] = useMessage()
     const messageListRef = React.createRef();
@@ -79,9 +81,9 @@ const HomeView = () => {
     return <div>
         {contextHolder}
         <Space direction={'vertical'} style={{ display: 'flex' }}>
-            <Row justify={'center'}>
+            {/* <Row justify={'center'}>
                 <img src={process.env.PUBLIC_URL + '/logo.png'} alt='' />
-            </Row>
+            </Row> */}
             <Row justify={'center'}>
                 <Col span={12}>
                     <Card bodyStyle={{ backgroundColor: "#f5f5f5f5" }}>
