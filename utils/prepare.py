@@ -18,11 +18,6 @@ for qa in data:
         if char not in reverse_index:
             reverse_index[char] = []
         reverse_index[char].append(i)
-    # seg_list = list(jieba.cut(q, cut_all=False))
-    # for seg in seg_list:
-    #     if seg not in reverse_index:
-    #         reverse_index[seg] = []
-    #     reverse_index[seg].append(i)
     i += 1
 
 out = {"data": data, "index": reverse_index}
