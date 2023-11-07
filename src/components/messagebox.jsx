@@ -58,9 +58,9 @@ const UserMessageBox = ({ id, text }) => {
 }
 
 const AnswerLink = ({ onClick, text, keywords, index }) => {
-    const segments = Array.from(new Intl.Segmenter('cn', { granularity: 'word' }).segment(text.trim())).map(r => r.segment);
+    const segments = text.split("")
     return (
-        <a href="" onClick={(e) => {
+        <a href="javascript:void(0)" onClick={(e) => {
             e.preventDefault()
             onClick();
         }} >

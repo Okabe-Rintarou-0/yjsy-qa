@@ -1,4 +1,4 @@
-import { Button, Card, Col, Input, Row, Space, Typography, message } from 'antd';
+import { Button, Card, Col, Input, Row, Space } from 'antd';
 import 'react-chat-elements/dist/main.css'
 import { AnswerLink, AssistantMessageBox, UserMessageBox } from '../components/messagebox';
 import { useEffect, useState } from 'react';
@@ -29,8 +29,7 @@ const HomeView = () => {
 
     const searchReply = () => {
         let relatedQuestions = [];
-        let result = Array.from(new Intl.Segmenter('cn', { granularity: 'word' }).segment(message.trim()))
-        let segments = result.map(r => r.segment);
+        let segments = message.split("")
         let index = DB.index;
         let hitKeywords = new Set();
         let hitCnt = {};
