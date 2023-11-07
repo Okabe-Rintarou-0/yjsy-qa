@@ -17,7 +17,7 @@ const HomeView = () => {
         if (messageListRef.current) {
             messageListRef.current.scrollTop = messageListRef.current.scrollHeight
         }
-    }, [messages])
+    }, [messages, messageListRef])
 
     const showQA = (qa) => {
         setMessages(messages => [
