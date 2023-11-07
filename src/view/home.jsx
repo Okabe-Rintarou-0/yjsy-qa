@@ -11,6 +11,7 @@ const HomeView = () => {
     const [messages, setMessages] = useState([])
     const [message, setMessage] = useState("")
     const [messageApi, contextHolder] = useMessage()
+    const messageListRef = React.createRef();
 
     useEffect(() => {
         if (messageListRef.current) {
@@ -75,8 +76,6 @@ const HomeView = () => {
 
         setMessage("")
     }
-
-    const messageListRef = React.createRef();
 
     return <div>
         {contextHolder}
